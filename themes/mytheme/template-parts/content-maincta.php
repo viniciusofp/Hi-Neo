@@ -1,6 +1,6 @@
 <div class="queromaisinformacoes">
 	<div class="container">
-		<div class="row rellax" data-rellax-speed="-4" data-rellax-percentage="0.3">
+		<div class="row rellax" data-rellax-speed="-4" data-rellax-percentage="0.5">
 			<div class="col-12 col-lg-6 align-self-center">
 				<h2>Quer uma agência digital para fazer sua área de marketing e sua força de vendas <strong>trabalharem juntas e explodirem em vendas?</strong></h2>
 			</div>
