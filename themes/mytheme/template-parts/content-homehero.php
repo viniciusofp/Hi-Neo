@@ -1,4 +1,4 @@
-<div class="page-header home-hero rellax" data-rellax-speed="1" data-rellax-percentage="0.5">
+<div class="home-hero">
 	<video id="home-video" autoplay muted loop>
   	<source src="<?php echo get_template_directory_uri() ?>/assets/home-videobg.mp4" type="video/mp4">
 	</video>

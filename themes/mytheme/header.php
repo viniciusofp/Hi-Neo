@@ -40,7 +40,7 @@
 			<a class="navbar-brand" href="<?php echo home_url('/'); ?>"><img src="<?php echo $logo?>" data-alt-logo="<?php echo get_template_directory_uri(); ?>/img/HiNeo-80.png" alt="" class="my-2"></a>
 
 		  <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-		    <span class="navbar-toggler-icon"></span>
+		    <i class="fas fa-bars"></i>
 		  </button>
 
 		  <!-- Menu -->
@@ -60,27 +60,49 @@
 
 	<script>
 		window.addEventListener('load', function () {
-			var collapse = false;
+			var hide = false;
+
+			// Menu Collapse and Color Change scripts
+
+			// Change to opaque menu when scroll
 			var logo = $('nav.navbar .navbar-brand img').attr('src');
 			var altLogo = $('nav.navbar .navbar-brand img').attr('data-alt-logo');
-			var waypoints = $('body').waypoint(function(direction) {
+			$('body').waypoint(function(direction) {
 				if (direction == "down") {
-			 	 $('nav.navbar').addClass('fixedNav');
+			 	 $('nav.navbar').addClass('whiteNav');
 			 	 $('nav.navbar .navbar-brand img').attr('src', altLogo);
 			 	 setTimeout(function() {
-			 	 	collapse = true;
-			 	 }, 1000)
+			 	 	hide = true;
+			 	 }, 500);
 				} else {
-			 	 $('nav.navbar').removeClass('fixedNav');
-			 	 $('nav.navbar .navbar-brand img').attr('src', logo);
-			 	 collapse = false;
+					if ( $('.navbar-toggler').attr('aria-expanded') == 'false')  {
+				 	 $('nav.navbar').removeClass('whiteNav');
+				 	 $('nav.navbar .navbar-brand img').attr('src', logo);
+				 	}
+				 	hide = false;
 				}
 			}, {
 			  offset: -15
 			})
+
+
+			// Change mobile menu color if user is on top of the page
+			$('.navbar-toggler').click(function() {
+				if (hide == false) {
+					if ( $('.navbar-toggler').attr('aria-expanded') == 'false')  {
+						$('nav.navbar').addClass('whiteNav')
+			 	 		$('nav.navbar .navbar-brand img').attr('src', altLogo);
+					} else {
+						$('nav.navbar').removeClass('whiteNav')
+			 	 		$('nav.navbar .navbar-brand img').attr('src', logo);
+					}
+				}
+			})
+
+			// Hide menu when scrolling down
 			var lastScrollTop = 0;
 			$(window).scroll(function(event){
-				if (collapse) {
+				if (hide) {
 			   var st = $(this).scrollTop();
 			   if (st > lastScrollTop){
 			       $('nav.navbar').addClass('smallNav');
