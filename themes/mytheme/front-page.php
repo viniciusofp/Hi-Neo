@@ -134,9 +134,9 @@ get_header();
 
 <!-- CTA Principal -->
 <?php get_template_part('template-parts/content', 'maincta') ?>
+
 <script>
 	window.addEventListener('load', function () {
-	  var rellax = new Rellax('.rellax');
 
 
 		var wayinbound = $('.inbound').waypoint(function(direction) {

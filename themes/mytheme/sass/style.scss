@@ -60,7 +60,7 @@ body {
 @import "navbar";
 
 .page-header {
-	padding-top: 155px;
+	padding-top: 135px;
 	padding-bottom: 80px;
 	color: white;
 }
@@ -108,5 +108,41 @@ body {
 		small {
 			color: #444;
 		}
+	}
+}
+
+.servicos-header {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.servico-topico {
+	margin-bottom: 60px;
+	margin-top: 30px;
+	text-align: center;
+	h4 {
+		font-weight: 700;
+	}
+	img, svg {
+		height: 160px;
+		width: auto;
+		margin: 0 auto;
+		display: block;
+		margin-bottom: 15px;
+	}
+}
+.servico-frase {
+	position: relative;
+	.imgbg {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		width: 100%;
+		height: auto;
+		z-index: -1;
+	}
+	.row {
+		min-height: 100vh;
 	}
 }

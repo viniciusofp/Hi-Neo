@@ -1,22 +1,17 @@
 module.exports = function(grunt) {
 
   grunt.initConfig({
-    // uglify: {
-    //   options: {
-    //     mangle: false,
-    //     compress: false
-    //   },
-    //   angular: {
-    //     files: {
-    //       'js/angularscripts.js': ['js/angular.min.js', 'js/angular-sanitize.min.js', 'js/angular-resource.min.js', 'js/app.js']
-    //     }
-    //   },
-    //   // my_target: {
-    //   //   files: {
-    //   //     'js/sitescripts.js': ['js/bootstrap.js', 'js/waypoints.js', 'js/inview.js']
-    //   //   }
-    //   // }
-    // },
+    uglify: {
+      options: {
+        mangle: false,
+        compress: false
+      },
+      scripts: {
+        files: {
+          'js/scripts.js': ['js/*.js']
+        }
+      },
+    },
     sass: {                              // Task
       dist: {                            // Target
         options: {                       // Target options
@@ -32,10 +27,10 @@ module.exports = function(grunt) {
         files: ['sass/*'],
         tasks: ['sass']
       },
-      // scripts: {
-      //   files: ['js/app.js'],
-      //   tasks: ['uglify']
-      // }
+      scripts: {
+        files: ['js/*'],
+        tasks: ['uglify']
+      }
     }
   });
 

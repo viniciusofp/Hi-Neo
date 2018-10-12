@@ -113,6 +113,7 @@
 				}
 			});
 
+	  var rellax = new Rellax('.rellax');
 		}); //window.load
 	</script>
 

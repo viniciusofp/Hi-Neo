@@ -12,17 +12,17 @@
 	color: white;
 	min-height: 100vh;
 	overflow: hidden;
-	border: 40px solid white;
-	@include border-radius(80px);
+	margin: 0 40px 40px 40px;
+	@include border-radius(40px);
 	@media all and (max-width: 1199px) {
-		border: 30px solid white;
-		@include border-radius(60px);
+		margin: 0 30px 30px 30px;
+		@include border-radius(30px);
 	}
 	@media all and (max-width: 767px) {
 		padding-left: 15px;
 		padding-right: 15px;
-		border: 15px solid white;
-		@include border-radius(30px);
+		margin: 0 15px 15px 15px;
+		@include border-radius(15px);
 	}
 	.col-12	{
 		filter: blur(5px);

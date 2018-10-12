@@ -132,6 +132,7 @@ input.form-control {
 	margin: 30px auto 60px;
 }
 
+
 .bg-white {
 	background: white;
 }
@@ -164,6 +165,16 @@ input.form-control {
 }
 .color-dark {
 	color: #444;
+}
+
+.fill-orange {
+	fill: $orange;
+}
+.fill-red {
+	fill: $red;
+}
+.fill-purple {
+	fill: $purple;
 }
 .transparent {
 	opacity: 0;
