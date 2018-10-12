@@ -1,0 +1,173 @@
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+// Typography
+
+a:hover, a:focus, a:visited {
+	text-decoration: none;
+}
+
+h1 {
+	font-size: 64px;
+	font-weight: 700;
+	strong, b {
+		font-weight: 900;
+	}
+	@media all and (max-width: 1199px) {
+		font-size: 56px;
+	}
+	@media all and (max-width: 991px) {
+		font-size: 48px;
+	}
+	@media all and (max-width: 767px) {
+		font-size: 36px;
+	}
+	@media all and (max-width: 576px) {
+		font-size: 32px;
+	}
+}
+h2 {
+	font-size: 42px;
+	@media all and (max-width: 1199px) {
+		font-size: 36px;
+	}
+	@media all and (max-width: 767px) {
+		font-size: 28px;
+	}
+}
+
+h3 {
+	font-size: 28px;
+	@media all and (max-width: 1199px) {
+		font-size: 21px;
+	}
+	@media all and (max-width: 767px) {
+		font-size: 18px;
+	}
+}
+
+h4 {
+	font-size: 21px;
+	@media all and (max-width: 1199px) {
+		font-size: 18px;
+	}
+}
+
+.lead {
+	font-size: 21px;
+	@media all and (max-width: 767px) {
+		font-size: 18px;
+	}
+}
+
+input.form-control {
+	background-color: transparent;
+	border: none;
+	border-bottom: 2px solid white;
+	border-radius: 0;
+	color: inherit;
+	transition: .3s;
+	&:focus, &:hover {
+		background-color: transparent;
+		// border: none;
+		border-color: $orange;
+		color: white;
+		box-shadow: none;
+	}
+}
+
+.btn {
+	border-width: 2px;
+	font-weight: 700;
+	@include border-radius(10px);
+	white-space: initial;
+	transition: .5s;
+}
+
+.btn-outline-orange {
+	background-color: transparent;
+	border: 2px solid $orange;
+	color: $orange;
+	&:hover {
+		border: 2px solid darken($orange,8%);
+		background: $orange;
+		color: white;
+	}
+}
+
+.btn-orange {
+	border: 2px solid darken($orange,8%);
+	background: $orange;
+	color: white;
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: inherit!important;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color: inherit!important;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color: inherit!important;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: inherit!important;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+   color: inherit!important;
+}
+
+::placeholder { /* Most modern browsers support this now. */
+   color: inherit!important;
+}
+.divider {
+	height: 4px;
+	width: 200px;
+	max-width: 100%;
+	background: $blue;
+	margin: 30px auto 60px;
+}
+
+.bg-white {
+	background: white;
+}
+.bg-blue {
+	background: $blue;
+}
+.bg-orange {
+	background: $orange;
+}
+.bg-red {
+	background: $red;
+}
+.bg-purple {
+	background: $purple;
+}
+.bg-dark {
+	background: #444;
+}
+.color-blue {
+	color: $blue;
+}
+.color-orange {
+	color: $orange;
+}
+.color-red {
+	color: $red;
+}
+.color-purple {
+	color: $purple;
+}
+.color-dark {
+	color: #444;
+}
+.transparent {
+	opacity: 0;
+}
+.opaque {
+	opacity: 1!important;
+}

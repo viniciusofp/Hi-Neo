@@ -1,0 +1,63 @@
+footer {
+	padding-top: 15px;
+	padding-bottom: 20px;
+	.footer-newsletter {
+		margin-bottom: 15px;
+		@include border-radius(15px);
+		padding: 15px;
+		border: 2px solid #888;
+		color: #888;
+		.email {
+			border-color: #888;
+			color: #888;
+			&:hover, &:focus {
+				border-color: darken(#888, 15%);
+			}
+		}
+		.btn-outline-primary {
+			border-color: #888;
+			color: #888;
+			&:hover, &:focus {
+				border-color: darken(#888, 15%);
+				background: #888;
+				color: white;
+			}
+		}
+	}
+	.footer-menu {
+		margin-top: 15px;
+		margin-bottom: 20px;
+		ul {
+			text-align: center;
+			padding-left: 0;
+			margin-left: 0;
+			margin-bottom: 0;
+			.current-menu-item a {
+						color: #888;
+			}
+			li {
+				list-style: none;
+				display: inline-block;
+				padding: 10px;
+				a {
+					font-weight: 700;
+					color: $orange;
+					&:hover {
+						color: #000;
+					}
+				}
+			}
+		}
+	}
+	.footer-contato {
+		@media all and (min-width: 767px) {
+			text-align: left!important;
+		}
+
+	}
+	.footer-social {
+		ul {
+			font-size: 21px;
+		}
+	}
+}

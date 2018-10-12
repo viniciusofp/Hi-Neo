@@ -1,0 +1,112 @@
+/*!
+Theme Name: Hi!Neo
+Theme URI: http://underscores.me/
+Author: Underscores.me
+Author URI: http://underscores.me/
+Description: Description
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: mytheme
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Paulo Rocha is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Bootstrap
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+# Bootstrap
+--------------------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700,900');
+$font-family-sans-serif: 'Raleway', sans-serif;
+$blue: #3DA7D8;
+$orange: #EC6D1D;
+$purple: #42348A;
+$red: #CC1331;
+$light-blue: #F7F9FA;
+$primary: $blue;
+
+@import "bootstrap/bootstrap";
+@import "carousel-fade";
+@import "animate";
+// Font Awesome
+@import "all.min";
+
+@mixin border-radius($amount) {
+	border-radius: $amount $amount $amount 0;
+}
+
+body {
+	color: #444;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-size: 16px;
+}
+
+@import 'globalelements-helperclasses';
+@import "navbar";
+
+.page-header {
+	padding-top: 155px;
+	padding-bottom: 80px;
+	color: white;
+}
+
+.page-section {
+	padding-top: 90px;
+	padding-bottom: 90px;
+	@media all and (max-width: 1199px) {
+		padding-top: 75px;
+		padding-bottom: 75px;
+	}
+	@media all and (max-width: 767px) {
+		padding-top: 60px;
+		padding-bottom: 60px;
+	}
+}
+
+@import "home";
+@import "maincta";
+@import "footer";
+
+
+.blog-item {
+	position: relative;
+	height: 420px;
+	margin-bottom: 15px;
+	background: #aaa;
+	border: 1px solid #f0f0f0;
+	background-size: cover;
+	background-position: center bottom;
+	@media all and (max-width: 1199px) {
+		height: 300px;
+	}
+	.meta {
+		position: absolute;
+		width: 100%;
+		bottom: 0;
+		left: 0;
+		padding: 15px;
+		background: $light-blue;
+		h4 {
+			color: $blue;
+			font-weight: 700;
+		}
+		small {
+			color: #444;
+		}
+	}
+}

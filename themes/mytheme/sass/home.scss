@@ -1,0 +1,128 @@
+.home-hero {
+	position: relative;
+	overflow: hidden;
+	color: white;
+	background: #42348Aaa;
+	padding-top: 240px;
+	padding-bottom: 135px;
+	video {
+		position: absolute;
+	  top: 50%;
+	  left: 50%;
+	  min-width: 100%;
+	  min-height: 100%;
+	  width: auto;
+	  height: auto;
+	  transform: translate(-50%, -50%);
+	  z-index: -3;
+	}
+	.shadow {
+		position: absolute;
+	  top: 0;
+	  left: 0;
+	  min-width: 100%;
+	  min-height: 100%;
+	  z-index: -1;
+		background: #42348Aaa;
+	}
+}
+
+.home-hero-cta {
+	// background: #42348A;
+	// border: 1px solid darken(#42348A, 10%);
+	// padding: 30px;
+	color: white;
+	@include border-radius(30px);
+	input {
+		@extend .lead;
+	}
+	button {
+		width: 100%;
+		&:hover {
+			border-color: darken($orange, 10%);
+			background: $orange;
+			color: white;
+		}
+	}
+}
+
+.home-servicos {
+	// @media all and (min-width: 992px) {
+	// 	background-image: url('./img/servicosbg.jpg');
+	// 	background-color: #fafafa;
+	// 	background-size: contain;
+	// 	background-repeat: no-repeat;
+	// 	background-position: right bottom;
+	// }
+}
+
+.links, .inbound, .automacao {
+	margin-top: 60px;
+	margin-bottom: 200px;
+	@media all and (max-width: 1199px) {
+		margin-bottom: 120px;
+	}
+}
+.automacao {
+	margin-bottom: 60px;
+}
+
+.item-servico {
+	img {
+		opacity: 0;
+		transition: 1s;
+	}
+}
+
+.home-clientes {
+	@extend .bg-orange;
+	color: white;
+	.row {
+	}
+}
+
+#carouselClientes {
+	.carousel-inner {
+		height: 280px;
+	}
+	.carousel-item {
+    padding-left: 45px;
+    padding-right: 45px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+	.carousel-control-prev,
+	.carousel-control-next {
+		width: initial;
+	}
+	.carousel-control-prev-icon,
+	.carousel-control-next-icon {
+		background-color: darken($orange, 8%);
+		background-size: 20px 20px;
+		border-radius: 100%;
+		padding: 10px;
+		width: 40px;
+		height: 40px;
+	}
+	.carousel-control-prev-icon{
+		background-position: 9px 10px;
+	}
+	.carousel-control-next-icon{
+		background-position: 12px 10px;
+	}
+	.author {
+		width: auto;
+		p {
+			display: inline-block;
+			margin-top: 15px;
+		}
+		img {
+			max-width: 80px;
+			height: auto;
+			margin-right: 10px;
+			margin-top: -30px;
+		}
+	}
+}
