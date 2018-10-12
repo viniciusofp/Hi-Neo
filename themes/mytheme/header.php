@@ -30,14 +30,14 @@
 
 			<?php 
 				// Set logo image
-				$logo = get_template_directory_uri() . '/img/Hineo-8-branco.png';
+				$logo = get_template_directory_uri() . '/img/hineo-8-branco.png';
 				// Change logo color to orange if is Hi!Neo or Blog pages
 				if (is_page('hi') || is_page('blog') || is_page('contato')) {
-					$logo = get_template_directory_uri() . '/img/Hineo-8-laranja.png';
+					$logo = get_template_directory_uri() . '/img/hineo-8-laranja.png';
 				}
 			?>
 
-			<a class="navbar-brand" href="<?php echo home_url('/'); ?>"><img src="<?php echo $logo?>" data-alt-logo="<?php echo get_template_directory_uri(); ?>/img/Hineo-80.png" alt="" class="my-2"></a>
+			<a class="navbar-brand" href="<?php echo home_url('/'); ?>"><img src="<?php echo $logo?>" data-alt-logo="<?php echo get_template_directory_uri(); ?>/img/hineo-80.png" alt="" class="my-2"></a>
 
 		  <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 		    <span class="navbar-toggler-icon"></span>
