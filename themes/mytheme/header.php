@@ -41,7 +41,7 @@
 				// Set logo image
 				$logo = get_template_directory_uri() . '/img/HiNeo-8-branco.png';
 				// Change logo color to orange if is Hi!Neo or Blog pages
-				if (is_page('hi') || is_page('blog') || is_page('contato')) {
+				if (is_page('hi') || is_page('blog') || is_page('contato') || is_single()) {
 					$logo = get_template_directory_uri() . '/img/HiNeo-8-laranja.png';
 				}
 			?>

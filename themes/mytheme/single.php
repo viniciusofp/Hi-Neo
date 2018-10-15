@@ -1,37 +1,75 @@
 <?php
 /**
- * The template for displaying all single posts
+ * The template for displaying all pages
  *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
+ * This is the template that displays all pages by default.
+ * Please note that this is the WordPress construct of pages
+ * and that other 'pages' on your WordPress site may use a
+ * different template.
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package Tema_por_viniciusofp
  */
 
 get_header();
+
+if (have_posts()): while(have_posts()): the_post();
+
 ?>
+	
+<div class="page-header bg-blue text-center">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h1><?php the_title(); ?></h1>
+				<p class="lead">Neste exato momento, milhões de pessoas estão na internet buscando respostas, soluções para resolver problemas ou realizar sonhos. Seja encontrado, converse com elas e venda!</p>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="page-section">
+	<div class="container">
+		<div class="row">
+			<div class="col-12 col-lg-8 post-content pb-5">
+				<?php the_content(); ?>
+			</div>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+			<div class="col-lg-4 post-sidebar">
+				<div class="sticky-top" style="top: 100px">
 
-		<?php
-		while ( have_posts() ) :
-			the_post();
+					<div class="share text-center color-blue pb-3">
+						<p><strong>Compartilhe nas redes sociais</strong></p>
+						<ul class="list-inline">
+							<li class="list-inline-item"><a href=""><i class="h3 fab fa-facebook"></i></a></li>
+							<li class="list-inline-item"><a href=""><i class="h3 fab fa-twitter"></i></a></li>
+							<li class="list-inline-item"><a href=""><i class="h3 fab fa-whatsapp"></i></a></li>
+							<li class="list-inline-item"><a href=""><i class="h3 fab fa-instagram"></i></a></li>
+							<li class="list-inline-item"><a href=""><i class="h3 fab fa-google-plus"></i></a></li>
+							<li class="list-inline-item"><a href=""><i class="h3 fab fa-linkedin"></i></a></li>
+						</ul>
+					</div>
+					<div class="newsletter">
+						<div class="form">
+							<div class="form-group">
+								<input type="text" class="form-control email" placeholder="Seu melhor e-mail"></input>
+							</div>
+							<button class="btn btn-outline-primary w-100">Assinar Newsletter</button>
+						</div>
+					</div>
 
-			get_template_part( 'template-parts/content', get_post_type() );
+				</div>
+			</div>
 
-			the_post_navigation();
+		</div>
+	</div>
+</div>
+<?php endwhile; endif ?>
 
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
 
-		endwhile; // End of the loop.
-		?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+<!-- CTA Principal -->
+<?php get_template_part('template-parts/content', 'maincta') ?>
 
 <?php
-get_sidebar();
 get_footer();

@@ -16,16 +16,7 @@
 <footer>
 	<div class="container">
 		<div class="row text-center">
-			<!-- <div class="col-md-6">
-				<div class="footer-newsletter">
-					<div class="form">
-						<div class="form-group">
-							<input type="text" class="form-control email"></input>
-						</div>
-						<button class="btn btn-outline-primary w-100">Assinar Newsletter</button>
-					</div>
-				</div>
-			</div> -->
+
 			<div class="col-md-3 align-self-center">
 				<a href="<?php echo home_url() ?>"><img class="pb-4" src="<?php echo get_template_directory_uri() ?>/img/HiNeo-80.png" alt=""></a>
 			</div>

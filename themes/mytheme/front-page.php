@@ -117,8 +117,8 @@ get_header();
 			<div class="col-md-4">
 				<a href="#">
 					<div class="blog-item" style="background-image: url('<?php echo get_template_directory_uri() ?>/img/Typewriter.jpg');">
-						<div class="meta">
-							<h4>Aqui é o título de alguma notícia</h4>
+						<div class="blog-meta">
+							<h4 class="title">Aqui é o título de alguma notícia</h4>
 							<p><small>10 de dezembro de 2018</small></p>
 						</div>
 					</div>

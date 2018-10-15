@@ -30,8 +30,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /*--------------------------------------------------------------
 # Bootstrap
 --------------------------------------------------------------*/
-@import url('https://fonts.googleapis.com/css?family=Raleway:400,700,900');
-$font-family-sans-serif: 'Raleway', sans-serif;
+// @import url('https://fonts.googleapis.com/css?family=Raleway:400,700,900');
+// $font-family-sans-serif: 'Raleway', sans-serif;
 $blue: #3DA7D8;
 $orange: #EC6D1D;
 $purple: #42348A;
@@ -52,11 +52,19 @@ $warning: $orange;
 	border-radius: $amount $amount $amount 0;
 }
 
+@mixin absolute-center {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
 body {
 	color: #444;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	font-size: 16px;
+  font-display: auto; 
 }
 
 @import 'globalelements-helperclasses';
@@ -103,21 +111,24 @@ body {
 	@media all and (max-width: 1199px) {
 		height: 300px;
 	}
-	.meta {
+	.blog-meta {
 		position: absolute;
 		width: 100%;
 		bottom: 0;
 		left: 0;
 		padding: 15px;
+	}
+}
+
+.blog-meta {
 		background: $light-blue;
-		h4 {
+		.title {
 			color: $blue;
 			font-weight: 700;
 		}
 		small {
 			color: #444;
 		}
-	}
 }
 
 .servicos-header {
@@ -199,5 +210,92 @@ body {
 	iframe {
 		width: 100%;
 		height: 500px;
+	}
+}
+
+
+.blog-posts {
+	transform: translateY(-45px);
+	z-index: 3;
+	.row {
+		background: $light-blue;
+		margin-bottom: 30px;
+	}
+	.thumbnail {
+		height: 320px;
+		overflow: hidden;
+		img {
+			width: 100%;
+			height: auto;
+			@include absolute-center;
+		}
+	}
+	.blog-meta {
+		padding: 30px;
+	}
+}
+
+.blog-newsletter {
+	margin-bottom: 15px;
+	@include border-radius(15px);
+	padding: 15px;
+	border: 2px solid #fff;
+	color: #fff;
+	.email {
+		border-color: #fff;
+		color: #fff;
+		&:hover, &:focus {
+			border-color: darken(#fff, 15%);
+		}
+	}
+	.btn-outline-primary {
+		border-color: #fff;
+		color: #fff;
+		&:hover, &:focus {
+			border-color: $light-blue;
+			background: #fff;
+			color: $blue;
+		}
+	}
+}
+
+.post-content {
+	* {
+		max-width: 100%;
+	}
+	a {
+		font-weight: 700;
+		color: $blue;
+		transition: .2s;
+		&:hover {
+			color: $orange
+		}
+	}
+	img {
+		padding-top: 30px;
+		padding-bottom: 45px;
+	}
+	.legenda, figcaption {
+		transform: translateY(-30px);
+		font-style: italic;
+		font-size: 14px;
+	}
+		
+}
+
+.post-sidebar {
+	.newsletter {
+	margin-bottom: 15px;
+	@include border-radius(15px);
+		padding: 15px;
+		border: 2px solid $blue;
+		color: $blue;
+		.email {
+			border-color: $blue;
+			color: $blue;
+			&:hover, &:focus {
+				border-color: darken($blue, 15%);
+			}
+		}
 	}
 }
