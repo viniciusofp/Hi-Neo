@@ -13,6 +13,9 @@
 <!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
+	<meta name="googlebot" content="index,archive,follow,noodp">
+	<meta name="robots" content="all,index,follow">
+	<meta name="msnbot" content="all,index,follow">
 	<meta name="Description" content="Nosso mundo é gerar leads, relacionamentos e vendas.">
 	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo get_template_directory_uri() ?>/apple-touch-icon-72x72.png" />
 	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo get_template_directory_uri() ?>/apple-touch-icon-144x144.png" />
