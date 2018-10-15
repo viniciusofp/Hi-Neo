@@ -16,7 +16,7 @@
 <footer>
 	<div class="container">
 		<div class="row text-center">
-			<div class="col-md-6">
+			<!-- <div class="col-md-6">
 				<div class="footer-newsletter">
 					<div class="form">
 						<div class="form-group">
@@ -25,8 +25,11 @@
 						<button class="btn btn-outline-primary w-100">Assinar Newsletter</button>
 					</div>
 				</div>
+			</div> -->
+			<div class="col-md-3 align-self-center">
+				<a href="<?php echo home_url() ?>"><img class="pb-4" src="<?php echo get_template_directory_uri() ?>/img/HiNeo-80.png" alt=""></a>
 			</div>
-			<div class="col-md-6">
+			<div class="col">
 				<div class="footer-contato">
 					<p>Praesent eu ex blandit augue vulputate elementum. In pellentesque ut orci ut commodo.</p>
 					<p><small>Alameda Jaú, XXX - São Paulo,<br>SP +55 11 3251 3383<br>contato@hineo.com.br</small></p>
@@ -42,7 +45,7 @@
 				</div>
 			</div>
 			<div class="col-12">
-				<a href="<?php echo home_url() ?>"><img class="pb-4" src="<?php echo get_template_directory_uri() ?>/img/HiNeo-80.png" alt=""></a>
+				
 				<div class="footer-social">
 					<ul class="list-inline">
 						<li class="list-inline-item"><a href=""><i class="fab fa-facebook"></i></a></li>
