@@ -83,6 +83,22 @@ input.form-control {
 		box-shadow: none;
 	}
 }
+textarea.form-control {
+	background-color: transparent;
+	border: none;
+	border: 2px solid white;
+	border-radius: 0;
+	color: inherit;
+	transition: .3s;
+	height: 200px;
+	&:focus, &:hover {
+		background-color: transparent;
+		// border: none;
+		border-color: $orange;
+		color: white;
+		box-shadow: none;
+	}
+}
 
 .btn {
 	border-width: 2px;
