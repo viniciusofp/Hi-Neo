@@ -162,3 +162,16 @@ body {
 		min-height: 100vh;
 	}
 }
+
+.sobre {
+	video {
+		width: 100%;
+		height: auto;
+	}
+}
+.video-gif {
+	::-webkit-media-controls-start-playback-button {
+	  display: none!important;
+	  -webkit-appearance: none;
+	}
+}
