@@ -1,4 +1,4 @@
-<div class="queromaisinformacoes">
+<div id="maincta" class="queromaisinformacoes">
 	<div class="container">
 		<div class="row rellax" data-rellax-speed="-4" data-rellax-percentage="0.5">
 			<div class="col-12 col-lg-6 align-self-center">
@@ -15,7 +15,7 @@
 					<div class="form-group">
 						<input type="text" class="form-control" placeholder="Seu telefone">
 					</div>
-					<button id="mainCta" class="btn btn-lg btn-outline-orange w-100 mt-3 mb-3">Quero aumentar meus resultados</button>
+					<button id="mainCta" class="btn btn-lg btn-outline-warning w-100 mt-3 mb-3">Quero aumentar meus resultados</button>
 
 				</form>
 			</div>

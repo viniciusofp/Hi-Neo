@@ -15,37 +15,61 @@
 get_header();
 ?>
 
-<?php if (is_page('inbound-marketing')) {
-	$color = 'color-red';
-	$bgclass = 'bg-red';
-	$svgfill = 'fill-red';
+<?php 
+	$cor = get_field('cor_da_pagina');
+	$color = 'color-' . $cor;
+	$bgclass = 'bg-' . $cor;
+	$svgfill = 'fill-' . $cor;
+if (is_page('inbound-marketing')) {
+
 	$bgimg = get_template_directory_uri() . '/img/bginbound.jpg';
 } else if (is_page('links-patrocinados')) {
-	$color = 'color-orange';
-	$bgclass = 'bg-orange';
-	$svgfill = 'fill-orange';
+
 	$bgimg = get_template_directory_uri() . '/img/bglinks.jpg';
 } else if (is_page('automacao-de-marketing-e-vendas')) {
-	$color = 'color-purple';
-	$bgclass = 'bg-purple';
-	$svgfill = 'fill-purple';
+
 	$bgimg = get_template_directory_uri() . '/img/bgautomacao.jpg';
 } else {
-	$bgclass = 'bg-blue';
 	$bgimg = '';
 } ?>
 	
 <div class="page-header <?php echo $bgclass ?> servicos-header text-center" style="background-image: url(<?php echo $bgimg ?>);">
 	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				<h1><?php the_title(); ?></h1>
-				<p>Neste exato momento, milhões de pessoas estão na internet buscando respostas, soluções para resolver problemas ou realizar sonhos. Seja encontrado, converse com elas e venda!</p>
-				<button class="btn-lg btn btn-outline-light w-100">Quero mais informações</button>
+		<div class="row justify-content-center">
+			<div class="col-md-10 col-lg-8">
+				<h2><?php the_title(); ?></h2>
+				<p class="lead">Neste exato momento, milhões de pessoas estão na internet buscando respostas, soluções para resolver problemas ou realizar sonhos. Seja encontrado, converse com elas e venda!</p>
+				<a href="#maincta"><button class="btn-lg btn btn-outline-light w-100">Quero mais informações</button></a>
 			</div>
 		</div>
 	</div>
 </div>
+<?php if (get_field('exibir_comparacao')): ?>
+	<div class="page-section servico-comparison">
+	<div class="container rellax" data-rellax-speed="-3" data-rellax-percentage="0.5">
+		<div class="row py-5">
+			<div class="col-md-6 align-self-center text-center">
+				<img src="<?php echo get_template_directory_uri() ?>/img/old.jpg" alt="">
+			</div>
+			<div class="col-md-6 align-self-center">
+				<h3 class="<?php echo $color ?>"><strong>Velho Marketing</strong></h3>
+				<p class="lead">Neste exato momento, milhões de pessoas estão na internet buscando respostas, soluções para resolver problemas ou realizar sonhos. Seja encontrado, converse com elas e venda!</p>
+			</div>
+		</div>
+		<div class="row pt-5">
+			<div class="col-md-6 align-self-start">
+				<h3 class="<?php echo $color ?>"><strong>Inbound Marketing</strong></h3>
+				<p class="lead">Neste exato momento, milhões de pessoas estão na internet buscando respostas, soluções para resolver problemas ou realizar sonhos. Seja encontrado, converse com elas e venda!</p>
+			</div>
+			<div class="col-md-6 align-self-center text-center">
+				<img src="<?php echo get_template_directory_uri() ?>/img/new.jpg" alt="">
+			</div>
+		</div>
+	</div>
+</div>
+<?php endif ?>
+
+
 <div class="page-section pb-3">
 	<div class="container">
 		<div class="row justify-content-center text-center">
@@ -68,13 +92,16 @@ get_header();
 		</div>
 	</div>
 </div>
-
+<?php 
+$frasebg = get_field('imagem_de_fundo');
+$frase = get_field('frase_de_destaque');
+ ?>
 <div class="servico-frase">
-	<img src="<?php echo get_template_directory_uri() ?>/img/orange.jpg" alt="" class="imgbg rellax" data-rellax-speed="-4" data-rellax-percentage="0.2">
+	<img src="<?php echo $frasebg;  ?>" alt="" class="imgbg rellax" data-rellax-speed="-4" data-rellax-percentage="0.2">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-10 col-lg-8 align-self-center">
-				<h1 class="<?php echo $color ?> rellax" data-rellax-speed="-2" data-rellax-percentage="0.5">Creating Custom Page Templates <strong>for Global Use</strong></h1>
+			<div class="<?php echo $color ?> col-md-10 col-lg-8 align-self-center rellax" data-rellax-speed="-2" data-rellax-percentage="0.5">
+				<?php echo $frase ?>
 			</div>
 		</div>
 	</div>

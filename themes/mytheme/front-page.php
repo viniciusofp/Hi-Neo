@@ -38,12 +38,12 @@ get_header();
 				</div>
 			</div>
 			<div class="col-lg-6 align-self-center">
-				<img id="inboundimg" src="<?php echo get_template_directory_uri(); ?>/img/inbound.jpg" alt="">
+				<img id="inboundimg" data-img="<?php echo get_template_directory_uri(); ?>/img/inbound.jpg" alt="">
 			</div>
 		</div>
 		<div class="row links item-servico rellax" data-rellax-speed="-1" data-rellax-percentage="0.2">
 			<div class="col-lg-6 align-self-center order-2 order-lg-1">
-				<img id="linksimg" src="<?php echo get_template_directory_uri(); ?>/img/links.jpg" alt="">
+				<img id="linksimg" data-img="<?php echo get_template_directory_uri(); ?>/img/links.jpg" alt="">
 			</div>
 			<div class="col-lg-6 align-self-center order-1 order-lg-2">
 				<div class="meta transparent">
@@ -60,7 +60,7 @@ get_header();
 				</div>
 			</div>
 			<div class="col-lg-6 align-self-center">
-				<img id="automacaoimg" src="<?php echo get_template_directory_uri(); ?>/img/automacao.jpg" alt="">
+				<img id="automacaoimg" data-img="<?php echo get_template_directory_uri(); ?>/img/automacao.jpg" alt="">
 			</div>
 		</div>
 	</div>
@@ -138,6 +138,9 @@ get_header();
 <script>
 	window.addEventListener('load', function () {
 
+		$('#inboundimg').attr('src', $('#inboundimg').attr('data-img'))
+		$('#linksimg').attr('src', $('#linksimg').attr('data-img'))
+		$('#automacaoimg').attr('src', $('#automacaoimg').attr('data-img'))
 
 		var wayinbound = $('.inbound').waypoint(function(direction) {
 		 	$('#inboundimg').addClass("animated fadeInRight");
@@ -146,7 +149,9 @@ get_header();
 		  offset: '60%'
 		})
 		var waylinks = $('.links').waypoint(function(direction) {
+
 		 	$('#linksimg').addClass("animated fadeInLeft");
+		 	$('#linksimg').attr("animated fadeInLeft");
 		 	$('.links .meta').addClass("animated fadeIn");
 		}, {
 		  offset: '60%'

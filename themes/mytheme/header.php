@@ -13,7 +13,15 @@
 <!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
-	<meta name="theme-color" content="#EC6D1D;">
+	<meta name="Description" content="Nosso mundo é gerar leads, relacionamentos e vendas.">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo get_template_directory_uri() ?>/apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo get_template_directory_uri() ?>/apple-touch-icon-144x144.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="<?php echo get_template_directory_uri() ?>/apple-touch-icon-152x152.png" />
+	<link rel="icon" type="image/png" href="<?php echo get_template_directory_uri() ?>/favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/png" href="<?php echo get_template_directory_uri() ?>/favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="<?php echo get_template_directory_uri() ?>/favicon-16x16.png" sizes="16x16" />
+	<link rel="manifest" href="<?php echo get_template_directory_uri(); ?>/manifest.json">
+	<meta name="theme-color" content="#EC6D1D">
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
@@ -114,7 +122,6 @@
 				}
 			});
 
-	  var rellax = new Rellax('.rellax');
 		}); //window.load
 	</script>
 

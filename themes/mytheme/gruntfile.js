@@ -4,11 +4,11 @@ module.exports = function(grunt) {
     uglify: {
       options: {
         mangle: false,
-        compress: false
+        compress: true
       },
       scripts: {
         files: {
-          'js/scripts.js': ['js/*.js']
+          'js/scripts.js': ['js/bootstrap.min.js', 'js/jquery.waypoints.min.js', 'js/rellax.min.js',]
         }
       },
     },
