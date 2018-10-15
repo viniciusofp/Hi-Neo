@@ -107,10 +107,12 @@
 	    }
 	  });
 	});
-
+if ('serviceWorker' in navigator) {
   navigator.serviceWorker
            .register('<?php echo get_template_directory_uri(); ?>/sw.js')
            .then(function() { console.log("Service Worker Registered"); });
+}
+
 
 </script>
 
