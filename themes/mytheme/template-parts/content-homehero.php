@@ -1,5 +1,5 @@
 <div class="home-hero">
-	<video id="home-video" autoplay muted loop>
+	<video id="home-video" autoplay muted loop playsinline>
   	<source src="<?php echo get_template_directory_uri() ?>/assets/home-videobg.mp4" type="video/mp4">
 	</video>
 

@@ -23,12 +23,12 @@ get_header();
 				<p>Um dos mais valiosos serviços que uma agência de comunicação pode prestar a seus clientes é saber identificar pessoas, talentos, habilidades, ferramentas e técnicas para cada problema ou situação de mercado. E isso nunca foi tão decisivo como hoje em dia. A Hi! Neo é isso. É entender muito bem o caso para poder chegar a um diagnóstico feliz e uma execução eficaz. Uma ideia genial pode ser um vídeo, uma campanha nos mecanismos de busca na internet ou a decisão de usar o bom e velho telefone para esquentar relacionamentos. Neste mundo de tantos termos novos, tanta tecnologia, tanta automação, é importante contar com quem tem um olhar ampliado de todo processo, ciente que no final das contas quem decide é a cabeça e o coração dessa máquina fantástica chamada gente.</p>
 			</div>
 			<div class="col-6 col-lg-3 offset-xl-1 align-self-start">
-				<video class="video-gif"  autoplay muted loop>
+				<video class="video-gif"  autoplay muted loop playsinline>
   				<source src="<?php echo get_template_directory_uri(); ?>/img/edu.mp4" type="video/mp4">
 				</video>
 			</div>
 			<div class="col-6 col-lg-3 align-self-end">
-				<video class="video-gif"  autoplay muted loop>
+				<video class="video-gif"  autoplay muted loop playsinline>
   				<source src="<?php echo get_template_directory_uri(); ?>/img/glauco.mp4" type="video/mp4">
 				</video>
 			</div>
