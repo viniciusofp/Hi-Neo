@@ -38,7 +38,7 @@
 <div id="page" class="site">
 <!-- Navbar -->
 
-	<nav id="header-nav" class="navbar fixed-top navbar-dark navbar-expand-lg">
+	<nav id="header-nav" class="navbar fixed-top navbar-dark navbar-expand-lg collapsed">
 
 		<div class="container">
 
