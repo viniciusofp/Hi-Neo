@@ -46,7 +46,7 @@ $warning: $orange;
 @import "carousel-fade";
 @import "animate";
 // Font Awesome
-@import "all.min";
+// @import "all.min";
 
 @mixin border-radius($amount) {
 	border-radius: $amount $amount $amount 0;
