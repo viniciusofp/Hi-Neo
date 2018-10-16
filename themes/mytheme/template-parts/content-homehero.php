@@ -28,9 +28,9 @@
 <script>
 	window.onload = function(e){ 
     $('.home-hero').removeClass('bg-purple');
-    $('h2').click(function() {
-    	document.getElementById("home-video").play()
-    })
+
+    document.getElementById("home-video").play()
+
     
 	}
 </script>
