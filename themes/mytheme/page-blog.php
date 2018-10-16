@@ -46,7 +46,7 @@ get_header();
 					</a>
 				</div>
 				<div class="col-lg-6 col-md-7 blog-meta align-self-center">
-					<a href="#">
+					<a href="/2018/09/27/ola-mundo/">
 						<h3 class="title">Aqui é o título de alguma notícia</h3>
 					</a>
 					<p>You may also swap .row for .form-row, a variation of our standard grid row that overrides the default column gutters for tighter and more compact layouts.</p>

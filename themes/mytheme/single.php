@@ -23,7 +23,7 @@ if (have_posts()): while(have_posts()): the_post();
 		<div class="row">
 			<div class="col-md-12">
 				<h1><?php the_title(); ?></h1>
-				<p class="lead">Neste exato momento, milhões de pessoas estão na internet buscando respostas, soluções para resolver problemas ou realizar sonhos. Seja encontrado, converse com elas e venda!</p>
+				<p class="lead">Photoshop is what many digital artists, photographers, graphic designers, and even some web developers have in common. What sets us apart is how we use the tool. In this tutorial, Yoanna Victorova shares her most often used Photoshop shortcuts and a few key parts of her creative process.</p>
 			</div>
 		</div>
 	</div>

@@ -8,7 +8,6 @@
  *
  * @package Tema_por_viniciusofp
  */
-
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>

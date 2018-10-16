@@ -92,6 +92,19 @@ if (is_page('inbound-marketing')) {
 		</div>
 	</div>
 </div>
+<?php if (is_page('automacao-de-marketing-e-vendas')): ?>
+	<div class="page-section">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-12 col-lg-10 text-center">
+					<video>
+						<source src="<?php echo get_template_directory_uri(); ?>/img/videovendas.mp4">
+					</video>
+				</div>
+			</div>
+		</div>
+	</div>
+<?php endif ?>
 <?php 
 $frasebg = get_field('imagem_de_fundo');
 $frase = get_field('frase_de_destaque');
