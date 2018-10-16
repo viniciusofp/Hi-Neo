@@ -8,7 +8,7 @@ module.exports = function(grunt) {
       },
       scripts: {
         files: {
-          'js/scripts.js': ['js/bootstrap.min.js', 'js/jquery.waypoints.min.js', 'js/rellax.min.js',]
+          'js/scripts.js': ['js/jquery-3.3.1.min.js', 'js/bootstrap.min.js', 'js/jquery.waypoints.min.js', 'js/rellax.min.js',]
         }
       },
     },
