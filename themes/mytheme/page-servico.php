@@ -97,7 +97,7 @@ if (is_page('inbound-marketing')) {
 		<div class="container">
 			<div class="row justify-content-center">
 				<div class="col-12 col-lg-10 text-center">
-					<video>
+					<video controls>
 						<source src="<?php echo get_template_directory_uri(); ?>/img/videovendas.mp4">
 					</video>
 				</div>
