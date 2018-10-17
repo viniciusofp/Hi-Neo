@@ -17,13 +17,12 @@
 	<div class="container">
 		<div class="row text-center">
 
-			<div class="col-md-3 align-self-center">
-				<a href="<?php echo home_url() ?>"><img class="pb-4" src="<?php echo get_template_directory_uri() ?>/img/HiNeo-80.png" alt=""></a>
+			<div class="col-md-3 align-self-center pb-4">
+				<?php the_custom_logo(); ?>
 			</div>
 			<div class="col">
 				<div class="footer-contato">
-					<p>Praesent eu ex blandit augue vulputate elementum. In pellentesque ut orci ut commodo.</p>
-					<p><small>Alameda Jaú, XXX - São Paulo,<br>SP +55 11 3251 3383<br>contato@hineo.com.br</small></p>
+					<?php dynamic_sidebar( 'footer-contact' ); ?>
 				</div>
 			</div>
 			<div class="col-12">
@@ -38,17 +37,12 @@
 			<div class="col-12">
 				
 				<div class="footer-social">
-					<ul class="list-inline">
-						<li class="list-inline-item"><a href=""><i class="fab fa-facebook"></i></a></li>
-						<li class="list-inline-item"><a href=""><i class="fab fa-twitter"></i></a></li>
-						<li class="list-inline-item"><a href=""><i class="fab fa-instagram"></i></a></li>
-						<li class="list-inline-item"><a href=""><i class="fab fa-linkedin"></i></a></li>
-					</ul>
+					<?php dynamic_sidebar( 'footer-social' ); ?>
 				</div>
 			</div>
 			<div class="col-12">
 				<div class="footer-credits">
-					<p class="small">Hi!Neo © 2018. Desenvolvido por <a href="//viniciusofp.com.br"><strong>viniciusofp</strong></a>.</p>
+					<p class="small">Hi!Neo © 2018. Desenvolvido por <a target="_blank" href="//viniciusofp.com.br"><strong>viniciusofp</strong></a>.</p>
 					
 				</div>
 			</div>

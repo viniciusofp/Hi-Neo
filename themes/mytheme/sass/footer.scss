@@ -38,7 +38,10 @@ footer {
 		ul {
 			font-size: 18px;
 			a {
-				color: $orange
+				color: $orange;
+				&:hover {
+					color: #252525;
+				}
 			}
 		}
 	}

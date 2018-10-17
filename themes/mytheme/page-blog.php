@@ -15,22 +15,12 @@
 get_header();
 ?>
 	
-<div class="page-header bg-blue">
+<div class="page-header bg-blue" style="background-image: url('<?php echo get_template_directory_uri();?>/img/inbound.jpg');">
 	<div class="container">
 		<div class="row">
 			<div class="col">
 				<h1>This is a <strong>blog!</strong></h1>
 				<p class="lead">At times, you maybe need to use margin or padding utilities to create that perfect alignment you need.</p>
-			</div>
-			<div class="col-md-6 col-lg-6">
-				<div class="blog-newsletter">
-					<div class="form">
-						<div class="form-group">
-							<input type="text" class="form-control email" placeholder="Seu melhor e-mail"></input>
-						</div>
-						<button class="btn btn-outline-primary w-100">Assinar Newsletter</button>
-					</div>
-				</div>
 			</div>
 		</div>
 	</div>

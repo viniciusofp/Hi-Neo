@@ -29,43 +29,7 @@ get_header();
 				<p><small> Alameda Jaú, XXX - São Paulo, SP <br>+55 11 3251 3383 <br>contato@hineo.com.br</small></p>
 			</div>
 			<div class="col-lg-7 offset-lg-1">
-				<form action="">
-					<div class="row">
-						<div class="col-md-6">
-							<div class="form-group">
-								<input type="text" class="form-control" placeholder="Seu nome">
-							</div>
-						</div>
-						<div class="col-md-6">
-							<div class="form-group">
-								<input type="text" class="form-control" placeholder="Seu melhor telefone">
-							</div>
-						</div>
-						<div class="col-md-12">
-							<div class="form-group">
-								<input type="text" class="form-control" placeholder="Seu melhor email">
-							</div>
-						</div>
-						<div class="col-md-6">
-							<div class="form-group">
-								<input type="text" class="form-control" placeholder="Site da sua empresa">
-							</div>
-						</div>
-						<div class="col-md-6">
-							<div class="form-group">
-								<input type="text" class="form-control" placeholder="Melhor dia para reunião">
-							</div>
-						</div>
-						<div class="col-12 py-2">
-							<div class="form-group">
-								<textarea name="" id="" cols="30" rows="10" class="form-control">Sua mensagem</textarea>
-							</div>
-						</div>
-						<div class="col-12">
-							<button class="btn btn-outline-light w-100">Enviar</button>
-						</div>
-					</div>
-				</form>
+				<?php get_template_part('template-parts/form', 'contato') ?>
 			</div>
 		</div>
 	</div>
