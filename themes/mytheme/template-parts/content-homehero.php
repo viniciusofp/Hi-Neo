@@ -63,9 +63,3 @@ window.onload = function(e){
 
 
 
-<script type="text/javascript">
-				var __ss_noform = __ss_noform || [];
-				__ss_noform.push(['baseURI', 'https://app-3QNCV3SBFY.marketingautomation.services/webforms/receivePostback/MzawMDEzsbA0BwA/']);
-				__ss_noform.push(['form', 'contatoGroupack', 'f1c46b13-2082-48e4-ae34-e9c3fb800142']);
-				__ss_noform.push(['submitType', 'manual']);
-			</script>
