@@ -34,7 +34,6 @@ if (have_posts()): while(have_posts()): the_post();
 			<div class="col-12 col-lg-8 post-content pb-5">
 				<?php the_content(); ?>
 			</div>
-
 			<div class="col-lg-4 post-sidebar">
 				<div class="sticky-top" style="top: 100px">
 					<div class="share text-center pb-3">
