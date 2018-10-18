@@ -35,4 +35,15 @@
 			color: $orange;
 		}
 	}
+	.wpcf7 {
+		padding-top: 30px;
+	}
+	input.wpcf7-submit.wpcf7-form-control {
+		@extend .btn;
+		@extend .btn-lg;
+		@extend .btn-outline-warning;
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+		width: 100%;
+	}
 }

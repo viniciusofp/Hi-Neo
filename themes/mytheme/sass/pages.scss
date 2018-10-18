@@ -213,6 +213,41 @@
 		
 }
 
+
+.pagination-wrapper {
+	text-align: center;
+	margin-top: 45px;
+	p {
+		color: #aaa;
+		font-size: 12px;
+		text-transform: uppercase;
+		font-weight: 600;
+		margin-bottom: 15px;
+	}
+	.numbers {
+		clear: both
+	}
+	a, span {
+		padding: 5px 12px;
+		border: 1px solid #eee;
+		margin: 6px;
+		margin-left: 0;
+	}
+	a {
+		font-weight: 700;
+		background: #efefef;
+		border-color: #e0e0e0;
+	}
+	a:hover {
+		background: $blue;
+		color: white;
+	}
+	span {
+		font-weight: 400;
+		color: #888;
+	}
+}
+
 .post-sidebar {
 	.newsletter {
 	margin-bottom: 15px;

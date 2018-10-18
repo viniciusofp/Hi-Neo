@@ -14,39 +14,68 @@
 
 get_header();
 ?>
+<?php if (have_posts()): while(have_posts()): the_post(); ?>
 	
-<div class="page-header bg-blue" style="background-image: url('<?php echo get_template_directory_uri();?>/img/inbound.jpg');">
+<div class="page-header bg-blue" style="background-image: url('<?php the_post_thumbnail_url(); ?>');">
 	<div class="container">
 		<div class="row">
 			<div class="col">
-				<h1>This is a <strong>blog!</strong></h1>
-				<p class="lead">At times, you maybe need to use margin or padding utilities to create that perfect alignment you need.</p>
+				<h1><?php the_title(); ?></h1>
+				<?php the_content(); ?>
 			</div>
 		</div>
 	</div>
 </div>
 
+<?php endwhile; endif; ?>
+
 <div class="blog-posts">
 	<div class="container">
-		<?php $i = 0; while ($i < 6 ) : ?>
+		<?php
+		$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+		$blogArgs = array(
+			'post_type' => 'post',
+			'posts_per_page' => 4,
+	  	'paged'          => $paged
+		);
+		$blogQuery = new WP_Query($blogArgs); ?>
+		<?php while ( $blogQuery->have_posts() ) : $blogQuery->the_post(); ?>
 			<div class="row">
 				<div class="col-lg-6 col-md-5 thumbnail">
-					<a href="/2018/09/27/ola-mundo/">
-						<img src="<?php echo get_template_directory_uri() ?>/img/Typewriter.jpg" alt="">
+					<a href="<?php the_permalink(); ?>">
+						<img src="<?php the_post_thumbnail_url(); ?>" alt="">
 					</a>
 				</div>
 				<div class="col-lg-6 col-md-7 blog-meta align-self-center">
-					<a href="/2018/09/27/ola-mundo/">
-						<h3 class="title">Aqui é o título de alguma notícia</h3>
+					<a href="<?php the_permalink(); ?>">
+						<h3 class="title"><?php the_title(); ?></h3>
 					</a>
-					<p>You may also swap .row for .form-row, a variation of our standard grid row that overrides the default column gutters for tighter and more compact layouts.</p>
-					<p><small>10 de dezembro de 2018</small></p>
+					<?php if (get_field('linha_fina')): ?>
+						<p><small><?php the_field('linha_fina') ?></small></p>
+					<?php else: ?>
+						<?php the_excerpt(); ?>
+					<?php endif ?>
+					<p><small><?php echo get_the_date(); ?></small></p>
 				</div>		
 			</div>
-			<?php $i++; endwhile; ?>
+				
+		<?php endwhile; ?>
+
+		<!-- pagination here -->
+		<?php if ($blogQuery->max_num_pages > 1): ?>
+			<div class="row justify-content-center">
+				<div class="col pagination-wrapper">
+					<p>Mais posts</p>
+					<div class="numbers">
+						<?php if (function_exists("pagination")) {
+				      pagination($blogQuery->max_num_pages);
+				    } ?>
+				  </div>
+				</div>
+			</div>
+		<?php endif ?>
 	</div>
 </div>
-
 
 
 

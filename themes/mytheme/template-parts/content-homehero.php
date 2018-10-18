@@ -1,16 +1,22 @@
+<?php 
+$imagebg = get_field('image_background');
+$videobg = get_field('video_background');
+$chamada = get_field('hero_chamada');
+$linha_fina = get_field('hero_linha_fina');
+?>
+
 <div class="home-hero bg-purple">
 	<video id="home-video" autoplay muted loop playsinline>
-  	<source src="<?php echo get_template_directory_uri() ?>/assets/home-videobg.mp4" type="video/mp4">
-  	<img src="<?php echo get_template_directory_uri() ?>/img/phonebg.jpg" alt="">
+  	<source src="<?php echo $videobg; ?>" type="video/mp4">
+  	<img src="<?php echo $imagebg; ?>" alt="">
 	</video>
-
 	<div class="container">
 		<div class="row">
 			<div class="col-12">
-				<h1 class="animated fadeIn">Nosso mundo é gerar <strong>leads, relacionamentos e vendas</strong></h1>
+				<?php echo $chamada ?>
 			</div>
 			<div class="col-md-6">
-				<h3 class="animated fadeInUp">Cras ac aliquet odio. Donec purus tortor.</h3>
+				<h3 class="animated fadeInUp"><?php echo $linha_fina ?></h3>
 			</div>
 			<div class="col-md-6">
 				<div class="home-hero-cta">

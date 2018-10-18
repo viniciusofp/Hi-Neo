@@ -55,14 +55,14 @@
 	// }
 }
 
-.links, .inbound, .automacao {
+.item-servico {
 	margin-top: 60px;
 	margin-bottom: 200px;
 	@media all and (max-width: 1199px) {
 		margin-bottom: 120px;
 	}
 }
-.automacao {
+.item-servico:last-child {
 	margin-bottom: 60px;
 }
 

@@ -68,7 +68,21 @@ h4 {
 	}
 }
 
-input.form-control {
+
+// Forms
+
+.wpcf7-form {
+	label {
+		width: 100%;
+	}
+	.wpcf7-form-control:not(.wpcf7-submit) {
+		width: 100%!important;
+		@extend .form-control;
+	}
+}
+
+input.form-control,
+input.wpcf7-form-control {
 	background-color: transparent;
 	border: none;
 	border-bottom: 2px solid white;
@@ -83,7 +97,8 @@ input.form-control {
 		box-shadow: none;
 	}
 }
-textarea.form-control {
+textarea.form-control,
+textarea.wpcf7-form-control  {
 	background-color: transparent;
 	border: none;
 	border: 2px solid white;
@@ -146,6 +161,9 @@ textarea.form-control {
 ::placeholder { /* Most modern browsers support this now. */
    color: inherit!important;
 }
+
+/////
+
 .divider {
 	height: 4px;
 	width: 200px;
