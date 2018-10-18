@@ -27,6 +27,7 @@ $linha_fina = get_field('hero_linha_fina');
 		</div>
 	</div>
 </div>
+
 <script>
 window.onload = function(e){ 
     $('.home-hero').removeClass('bg-purple');
@@ -49,3 +50,22 @@ window.onload = function(e){
 };
 
 </script>
+
+<!-- SharpSpring -->
+<script type="text/javascript">
+		var wpcf7Elm = jQuery('#homeemail').closest('.wpcf7')[0];wpcf7Elm.addEventListener( 'wpcf7mailsent', function( event ) {__ss_noform.push(['submit', null, '16d437f1-f5da-4a9a-b655-8052d0e53c12']);}, false );
+    var __ss_noform = __ss_noform || [];
+    __ss_noform.push(['baseURI', 'https://app-3QNCT37ACG.marketingautomation.services/webforms/receivePostback/MzawMDEzMbe0AAA/']);
+    __ss_noform.push(['form', 'homeemail', '16d437f1-f5da-4a9a-b655-8052d0e53c12']);
+		__ss_noform.push(['submitType', 'manual']);
+</script>
+<script type="text/javascript" src="https://koi-3QNCT37ACG.marketingautomation.services/client/noform.js?ver=1.24" ></script>
+
+
+
+<script type="text/javascript">
+				var __ss_noform = __ss_noform || [];
+				__ss_noform.push(['baseURI', 'https://app-3QNCV3SBFY.marketingautomation.services/webforms/receivePostback/MzawMDEzsbA0BwA/']);
+				__ss_noform.push(['form', 'contatoGroupack', 'f1c46b13-2082-48e4-ae34-e9c3fb800142']);
+				__ss_noform.push(['submitType', 'manual']);
+			</script>
