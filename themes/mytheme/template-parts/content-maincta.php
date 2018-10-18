@@ -63,6 +63,6 @@ $the_query = new WP_Query( $args ); ?>
 		var wpcf7Elm = jQuery('#mainform').closest('.wpcf7')[0];wpcf7Elm.addEventListener( 'wpcf7mailsent', function( event ) {__ss_noform.push(['submit', null, '48139990-bfca-4f89-9920-f6d2699def93']);}, false );
     var __ss_noform = __ss_noform || [];
     __ss_noform.push(['baseURI', 'https://app-3QNCT37ACG.marketingautomation.services/webforms/receivePostback/MzawMDEzMbe0AAA/']);
-    __ss_noform.push(['form', 'mainform' '48139990-bfca-4f89-9920-f6d2699def93']);
+    __ss_noform.push(['form', 'mainform', '48139990-bfca-4f89-9920-f6d2699def93']);
 </script>
 <script type="text/javascript" src="https://koi-3QNCT37ACG.marketingautomation.services/client/noform.js?ver=1.24" ></script>
