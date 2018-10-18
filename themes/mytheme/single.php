@@ -43,12 +43,15 @@ if (have_posts()): while(have_posts()): the_post();
 						<?php echo get_template_part('template-parts/content', 'socialshare') ?>
 					</div>
 					<div class="newsletter">
-						<div class="form">
-							<div class="form-group">
-								<input type="text" class="form-control email" placeholder="Seu melhor e-mail"></input>
-							</div>
-							<button class="btn btn-outline-primary w-100">Assinar Newsletter</button>
-						</div>
+						<?php echo do_shortcode('[contact-form-7 id="3074" title="Formulário - Newsletter" html_id="newsletterform"]') ?>
+						<script type="text/javascript">
+								var wpcf7Elm = jQuery('#newsletterform').closest('.wpcf7')[0];wpcf7Elm.addEventListener( 'wpcf7mailsent', function( event ) {__ss_noform.push(['submit', null, '3e2ad501-f2b8-473b-a5b5-d2e53f4f0c48']);}, false );
+						    var __ss_noform = __ss_noform || [];
+						    __ss_noform.push(['baseURI', 'https://app-3QNCT37ACG.marketingautomation.services/webforms/receivePostback/MzawMDEzMbe0AAA/']);
+						    __ss_noform.push(['form', 'newsletterform', '3e2ad501-f2b8-473b-a5b5-d2e53f4f0c48']);
+						</script>
+						<script type="text/javascript" src="https://koi-3QNCT37ACG.marketingautomation.services/client/noform.js?ver=1.24" ></script>
+
 					</div>
 
 				</div>

@@ -261,6 +261,23 @@
 		padding: 15px;
 		border: 2px solid $blue;
 		color: $blue;
+		input.wpcf7-form-control {
+			border-color: $blue;
+			color: $blue;
+		}
+		input.wpcf7-submit {
+			@extend .btn;
+			@extend .btn-outline-primary;
+			width: 100%;
+			border-color: $blue;
+			color: $blue;
+		}
+		.ajax-loader {
+			display: none;
+		}
+		div.wpcf7-mail-sent-ok, div.wpcf7-validation-errors, div.wpcf7-acceptance-missing {
+			margin-top: 0;
+		}
 		.email {
 			border-color: $blue;
 			color: $blue;
