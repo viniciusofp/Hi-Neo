@@ -37,7 +37,6 @@ if (have_posts()): while(have_posts()): the_post();
 
 			<div class="col-lg-4 post-sidebar">
 				<div class="sticky-top" style="top: 100px">
-
 					<div class="share text-center pb-3">
 						<p><strong>Compartilhe nas redes sociais</strong></p>
 						<?php echo get_template_part('template-parts/content', 'socialshare') ?>
@@ -51,9 +50,7 @@ if (have_posts()): while(have_posts()): the_post();
 						    __ss_noform.push(['form', 'newsletterform', '3e2ad501-f2b8-473b-a5b5-d2e53f4f0c48']);
 						</script>
 						<script type="text/javascript" src="https://koi-3QNCT37ACG.marketingautomation.services/client/noform.js?ver=1.24" ></script> 
-
 					</div>
-
 				</div>
 			</div>
 
