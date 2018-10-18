@@ -179,3 +179,10 @@ add_action( 'wp_footer', 'my_deregister_scripts' );
  * Pagination
  */
 require get_template_directory() . '/inc/pagination.php';
+
+// Alow SVG media upload
+function cc_mime_types($mimes) {
+  $mimes['svg'] = 'image/svg+xml';
+  return $mimes;
+}
+add_filter('upload_mimes', 'cc_mime_types');

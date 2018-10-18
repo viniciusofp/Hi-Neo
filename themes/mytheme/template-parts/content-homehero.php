@@ -19,13 +19,8 @@ $linha_fina = get_field('hero_linha_fina');
 				<h3 class="animated fadeInUp"><?php echo $linha_fina ?></h3>
 			</div>
 			<div class="col-md-6">
-				<div class="home-hero-cta">
-					<form action="" class="animated flipInX delay-1s">
-						<div class="form-group">
-							<input type="text" class="form-control" placeholder="Seu melhor e-mail">
-						</div>
-							<button class="btn btn-outline-light">Quero aumentar meus resultados</button>
-					</form>
+				<div class="home-hero-cta animated flipInX delay-1s">
+					<?php echo do_shortcode(get_field('formulario')) ?>
 				</div>
 					
 			</div>

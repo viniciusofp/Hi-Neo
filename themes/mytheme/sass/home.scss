@@ -36,6 +36,11 @@
 		@extend .lead;
 	}
 	button {
+	}
+	input.wpcf7-submit.wpcf7-form-control {
+		@extend .btn;
+		@extend .btn-outline-light;
+		margin-bottom: 15px;
 		width: 100%;
 		&:hover {
 			border-color: darken($orange, 10%);

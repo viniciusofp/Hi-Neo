@@ -14,6 +14,7 @@
 
 get_header();
 ?>
+<?php if (have_posts()): while(have_posts()): the_post(); ?>
 
 <?php 
 	$cor = get_field('cor_da_pagina');
@@ -37,78 +38,90 @@ if (is_page('inbound-marketing')) {
 	<div class="container">
 		<div class="row justify-content-center">
 			<div class="col-md-10 col-lg-8">
-				<h2><?php the_title(); ?></h2>
-				<p class="lead">Neste exato momento, milhões de pessoas estão na internet buscando respostas, soluções para resolver problemas ou realizar sonhos. Seja encontrado, converse com elas e venda!</p>
+				<?php the_content(); ?>
 				<a href="#maincta"><button class="btn-lg btn btn-outline-light w-100">Quero mais informações</button></a>
 			</div>
 		</div>
 	</div>
 </div>
-<?php if (get_field('exibir_comparacao')): ?>
+<?php if (have_rows('linha')):
+	$linha = 0;?>
 	<div class="page-section servico-comparison">
 	<div class="container rellax" data-rellax-speed="-3" data-rellax-percentage="0.5">
+		<?php while (have_rows( 'linha' )): the_row(); $linha++?>
+
+		<?php if (($linha % 2) == 1): ?>
 		<div class="row py-5">
 			<div class="col-md-6 align-self-center text-center">
-				<img src="<?php echo get_template_directory_uri() ?>/img/old.jpg" alt="">
+				<img src="<?php the_sub_field('imagem') ?>" alt="">
 			</div>
 			<div class="col-md-6 align-self-center">
-				<h3 class="<?php echo $color ?>"><strong>Velho Marketing</strong></h3>
-				<p class="lead">Neste exato momento, milhões de pessoas estão na internet buscando respostas, soluções para resolver problemas ou realizar sonhos. Seja encontrado, converse com elas e venda!</p>
+				<h3 class="<?php echo $color ?>"><strong><?php the_sub_field('titulo') ?></strong></h3>
+				<p class="lead"><?php the_sub_field('texto') ?></p>
 			</div>
 		</div>
+		<?php else: ?>
 		<div class="row pt-5">
 			<div class="col-md-6 align-self-start">
-				<h3 class="<?php echo $color ?>"><strong>Inbound Marketing</strong></h3>
-				<p class="lead">Neste exato momento, milhões de pessoas estão na internet buscando respostas, soluções para resolver problemas ou realizar sonhos. Seja encontrado, converse com elas e venda!</p>
+				<h3 class="<?php echo $color ?>"><strong><?php the_sub_field('titulo') ?></strong></h3>
+				<p class="lead"><?php the_sub_field('texto') ?></p>
 			</div>
 			<div class="col-md-6 align-self-center text-center">
-				<img src="<?php echo get_template_directory_uri() ?>/img/new.jpg" alt="">
+				<img src="<?php the_sub_field('imagem') ?>" alt="">
 			</div>
 		</div>
+		<?php endif ?>
+
+		<?php endwhile; ?>
 	</div>
 </div>
 <?php endif ?>
 
 
+<?php if (have_rows('topicos')): ?>
 <div class="page-section pb-3">
 	<div class="container">
 		<div class="row justify-content-center text-center">
 			<div class="col-md-12">
-				<h2>Marketing Digital orientado para <strong>resultados</strong></h2>
+				<?php the_field('topicos_chamada') ?>
 			</div>
 			<div class="col-md-10">
-				<p class="lead">Neste exato momento, milhões de pessoas estão na internet buscando respostas, soluções para resolver problemas ou realizar sonhos. Seja encontrado, converse com elas e venda!</p>
+				<p class="lead"><?php the_field('topicos_linha_fina') ?></p>
 				<div class="divider <?php echo $bgclass; ?> mb-0"></div>
 			</div>
 		</div>
 		<div class="row justify-content-center pt-5">
-			<?php $i = 0; while ($i < 5) : ?>
-			<div class="servico-topico col-12 col-md-6 col-lg-4">
-				<img class="svg <?php echo $svgfill ?>" src="<?php echo get_template_directory_uri() ?>/img/topic.svg" alt="">
-				<h4 class="<?php echo $color; ?>">Tópico</h4>
-				<p>Neste exato momento, milhões de pessoas estão na internet buscando respostas, soluções para resolver problemas ou realizar sonhos.</p>
-			</div>
-			<?php $i++; endwhile; ?>
+				<?php while (have_rows('topicos')) : the_row(); ?>
+					<div class="servico-topico col-12 col-md-6 col-lg-4">
+						<img class="svg <?php echo $svgfill ?>" src="<?php the_sub_field('icone') ?>" alt="">
+						<h4 class="<?php echo $color; ?>"><?php the_sub_field('titulo') ?></h4>
+						<p><?php the_sub_field('texto') ?></p>
+					</div>
+				<?php endwhile; ?>
 		</div>
 	</div>
 </div>
-<?php if (is_page('automacao-de-marketing-e-vendas')): ?>
+<?php endif ?>
+
+<?php if (get_field('video')): ?>
 	<div class="page-section">
 		<div class="container">
 			<div class="row justify-content-center">
 				<div class="col-12 col-lg-10 text-center">
 					<video controls>
-						<source src="<?php echo get_template_directory_uri(); ?>/img/videovendas.mp4">
+						<source src="<?php the_field('video') ?>">
 					</video>
 				</div>
 			</div>
 		</div>
 	</div>
 <?php endif ?>
+
 <?php 
 $frasebg = get_field('imagem_de_fundo');
 $frase = get_field('frase_de_destaque');
  ?>
+<?php if ($frase): ?>
 <div class="servico-frase">
 	<img src="<?php echo $frasebg;  ?>" alt="" class="imgbg rellax" data-rellax-speed="-4" data-rellax-percentage="0.2">
 	<div class="container">
@@ -119,6 +132,7 @@ $frase = get_field('frase_de_destaque');
 		</div>
 	</div>
 </div>
+<?php endif ?>
 
 <!-- CTA Principal -->
 <?php get_template_part('template-parts/content', 'maincta') ?>
@@ -163,5 +177,6 @@ window.addEventListener('load', function () {
 	});
 });
 </script>
+<?php endwhile; endif; ?>
 <?php
 get_footer();
