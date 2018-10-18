@@ -81,6 +81,25 @@ h4 {
 	}
 }
 
+div.wpcf7-response-output {
+	margin: -30px 0 15px;
+	@include border-radius(10px);
+}
+
+div.wpcf7-validation-errors, div.wpcf7-acceptance-missing {
+	background: $yellow;
+	color: black;
+}
+
+div.wpcf7-mail-sent-ok {
+	background: $green;
+	color: white;
+}
+
+span.wpcf7-not-valid-tip {
+	font-size: 14px;
+}
+
 input.form-control,
 input.wpcf7-form-control {
 	background-color: transparent;
