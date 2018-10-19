@@ -127,6 +127,8 @@ add_action( 'widgets_init', 'mytheme_widgets_init' );
 function mytheme_scripts() {
 	wp_enqueue_style( 'mytheme-style', get_stylesheet_uri() );
 
+	wp_deregister_script('jquery');
+  wp_deregister_style( 'contact-form-7' );
 	wp_enqueue_script( 'mytheme-scripts', get_template_directory_uri() . '/js/scripts.js', array(), '20151215', true );
 	
 

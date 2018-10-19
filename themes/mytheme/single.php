@@ -87,9 +87,5 @@ if (have_posts()): while(have_posts()): the_post();
 <?php endwhile; endif ?>
 
 
-
-<!-- CTA Principal -->
-<?php get_template_part('template-parts/content', 'maincta') ?>
-
 <?php
 get_footer();

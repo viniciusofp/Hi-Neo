@@ -41,9 +41,8 @@ get_header();
 		$blogQuery = new WP_Query($blogArgs); ?>
 		<?php while ( $blogQuery->have_posts() ) : $blogQuery->the_post(); ?>
 			<div class="row">
-				<div class="col-lg-6 col-md-5 thumbnail">
-					<a href="<?php the_permalink(); ?>">
-						<img src="<?php the_post_thumbnail_url(); ?>" alt="">
+				<div class="col-lg-6 col-md-5 thumbnail" style="background-image: url('<?php the_post_thumbnail_url('large'); ?>');">
+					<a href="<?php the_permalink(); ?>" class="imglink">
 					</a>
 				</div>
 				<div class="col-lg-6 col-md-7 blog-meta align-self-center">
@@ -61,26 +60,42 @@ get_header();
 				
 		<?php endwhile; ?>
 
-		<!-- pagination here -->
-		<?php if ($blogQuery->max_num_pages > 1): ?>
-			<div class="row justify-content-center">
-				<div class="col pagination-wrapper">
-					<p>Mais posts</p>
-					<div class="numbers">
-						<?php if (function_exists("pagination")) {
-				      pagination($blogQuery->max_num_pages);
-				    } ?>
-				  </div>
-				</div>
+	</div>
+</div>
+<div class="container">
+	<!-- pagination here -->
+	<?php if ($blogQuery->max_num_pages > 1): ?>
+		<div class="row justify-content-center">
+			<div class="col pagination-wrapper pb-5 mt-0">
+				<p>Mais posts</p>
+				<div class="numbers">
+					<?php if (function_exists("pagination")) {
+			      pagination($blogQuery->max_num_pages);
+			    } ?>
+			  </div>
 			</div>
-		<?php endif ?>
+		</div>
+	<?php endif ?>
+</div>
+
+<div class="blog-newsletter">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-12 col-sm-10 col-xl-8 text-center">
+				<div class="newsletter">
+					<?php echo do_shortcode('[contact-form-7 id="3074" title="Formulário - Newsletter" html_id="newsletterform"]') ?>
+					<script type="text/javascript">
+							var wpcf7Elm = jQuery('#newsletterform').closest('.wpcf7')[0];wpcf7Elm.addEventListener( 'wpcf7mailsent', function( event ) {__ss_noform.push(['submit', null, '3e2ad501-f2b8-473b-a5b5-d2e53f4f0c48']);}, false );
+					    var __ss_noform = __ss_noform || [];
+					    __ss_noform.push(['baseURI', 'https://app-3QNCT37ACG.marketingautomation.services/webforms/receivePostback/MzawMDEzMbe0AAA/']);
+					    __ss_noform.push(['form', 'newsletterform', '3e2ad501-f2b8-473b-a5b5-d2e53f4f0c48']);
+					</script>
+					<script type="text/javascript" src="https://koi-3QNCT37ACG.marketingautomation.services/client/noform.js?ver=1.24" ></script> 
+			</div>
+		</div>
 	</div>
 </div>
 
-
-
-<!-- CTA Principal -->
-<?php get_template_part('template-parts/content', 'maincta') ?>
 
 <?php
 get_footer();

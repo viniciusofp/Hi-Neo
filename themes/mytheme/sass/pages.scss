@@ -99,7 +99,7 @@
 		z-index: -1;
 	}
 	.row {
-		min-height: 100vh;
+		min-height: 580px;
 	}
 }
 
@@ -123,7 +123,7 @@
 	background: transparent;
 	padding-top: 155px;
 	padding-bottom: 135px;
-	video {
+	video, img {
 		position: absolute;
 	  top: 50%;
 	  left: 50%;
@@ -133,6 +133,7 @@
 	  height: auto;
 	  transform: translate(-50%, -50%);
 	  z-index: -3;
+    object-fit: cover;
 	}
 	input.wpcf7-submit.wpcf7-form-control {
 		@extend .btn;
@@ -160,10 +161,15 @@
 	.thumbnail {
 		height: 320px;
 		overflow: hidden;
-		img {
+		position: relative;
+		background-size: cover;
+		background-position: center;
+		a {
+			position: absolute;
+			top: 0;
+			left: 0;
 			width: 100%;
-			height: auto;
-			@include absolute-center;
+			height: 100%;
 		}
 	}
 	.blog-meta {
@@ -254,6 +260,40 @@
 	}
 }
 
+.blog-newsletter {
+	.newsletter {
+		background: $blue;
+		margin-bottom: 15px;
+		@include border-radius(15px);
+		padding: 15px;
+		border: 2px solid $blue;
+		color: white;
+		input.wpcf7-form-control {
+			&:focus, &:hover {
+				color: white;
+			}
+		}
+		input.wpcf7-submit {
+			@extend .btn;
+			@extend .btn-outline-light;
+			width: 100%;
+		}
+		.ajax-loader {
+			display: none;
+		}
+		div.wpcf7-mail-sent-ok, div.wpcf7-validation-errors, div.wpcf7-acceptance-missing {
+			margin-top: 0;
+		}
+		.email {
+			border-color: $blue;
+			color: $blue;
+			&:hover, &:focus {
+				border-color: darken($blue, 15%);
+			}
+		}
+	}
+}
+
 .post-sidebar {
 	.newsletter {
 	margin-bottom: 15px;
@@ -264,6 +304,9 @@
 		input.wpcf7-form-control {
 			border-color: $blue;
 			color: $blue;
+			&:hover, &:focus {
+				color: $blue;
+			}
 		}
 		input.wpcf7-submit {
 			@extend .btn;
