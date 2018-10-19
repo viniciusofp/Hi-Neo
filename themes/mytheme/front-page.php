@@ -165,22 +165,22 @@ $active = 'active';
 	window.addEventListener('load', function () {
 
 		var waypoints = []
-		var itemServico = $('.item-servico');
+		var itemServico = jQuery('.item-servico');
 		for (var i = itemServico.length; i > 0; i--) {
 
-			$('.way-' + i +' img').attr('src', $('.way-' + i +' img').attr('data-img'))
+			jQuery('.way-' + i +' img').attr('src', jQuery('.way-' + i +' img').attr('data-img'))
 			if (i % 2 == 1) {
-				waypoints[i] = $('.way-' + i).waypoint(function(direction) {
-			 		$(this.element).find('img').addClass("animated fadeInRight");
-				 	$(this.element).find('.meta').addClass("animated fadeIn");
+				waypoints[i] = jQuery('.way-' + i).waypoint(function(direction) {
+			 		jQuery(this.element).find('img').addClass("animated fadeInRight");
+				 	jQuery(this.element).find('.meta').addClass("animated fadeIn");
 
 				}, {
 				  offset: '60%'
 				})
 			} else {
-				waypoints[i] = $('.way-' + i).waypoint(function(direction) {
-			 		$(this.element).find('img').addClass("animated fadeInLeft");
-				 	$(this.element).find('.meta').addClass("animated fadeIn");
+				waypoints[i] = jQuery('.way-' + i).waypoint(function(direction) {
+			 		jQuery(this.element).find('img').addClass("animated fadeInLeft");
+				 	jQuery(this.element).find('.meta').addClass("animated fadeIn");
 
 				}, {
 				  offset: '60%'

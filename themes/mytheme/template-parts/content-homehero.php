@@ -30,7 +30,7 @@ $linha_fina = get_field('hero_linha_fina');
 
 <script>
 window.onload = function(e){ 
-    $('.home-hero').removeClass('bg-purple');
+    jQuery('.home-hero').removeClass('bg-purple');
 
     var isMobile = function() {
     	var check = false;
@@ -44,7 +44,7 @@ window.onload = function(e){
     var video = document.getElementById('home-video');
 	  var img = video.querySelector('img');
 	  if (img) {
-	  	var fallbackimg = $('#fallbackbg')
+	  	var fallbackimg = jQuery('#fallbackbg')
 		  fallbackimg.attr('src', fallbackimg.attr('data-src'));
 	    video.parentNode.replaceChild(img, video);
 	  }

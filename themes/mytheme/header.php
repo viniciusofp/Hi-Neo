@@ -80,19 +80,19 @@
 			// Menu Collapse and Color Change scripts
 
 			// Change to opaque menu when scroll
-			var logo = $('nav.navbar .navbar-brand img').attr('src');
-			var altLogo = $('nav.navbar .navbar-brand img').attr('data-alt-logo');
-			$('body').waypoint(function(direction) {
+			var logo = jQuery('nav.navbar .navbar-brand img').attr('src');
+			var altLogo = jQuery('nav.navbar .navbar-brand img').attr('data-alt-logo');
+			jQuery('body').waypoint(function(direction) {
 				if (direction == "down") {
-			 	 $('nav.navbar').addClass('whiteNav');
-			 	 $('nav.navbar .navbar-brand img').attr('src', altLogo);
+			 	 jQuery('nav.navbar').addClass('whiteNav');
+			 	 jQuery('nav.navbar .navbar-brand img').attr('src', altLogo);
 			 	 setTimeout(function() {
 			 	 	hide = true;
 			 	 }, 500);
 				} else {
-					if ( $('.navbar-toggler').attr('aria-expanded') == 'false')  {
-				 	 $('nav.navbar').removeClass('whiteNav');
-				 	 $('nav.navbar .navbar-brand img').attr('src', logo);
+					if ( jQuery('.navbar-toggler').attr('aria-expanded') == 'false')  {
+				 	 jQuery('nav.navbar').removeClass('whiteNav');
+				 	 jQuery('nav.navbar .navbar-brand img').attr('src', logo);
 				 	}
 				 	hide = false;
 				}
@@ -102,27 +102,27 @@
 
 
 			// Change mobile menu color if user is on top of the page
-			$('.navbar-toggler').click(function() {
+			jQuery('.navbar-toggler').click(function() {
 				if (hide == false) {
 					if ( $('.navbar-toggler').attr('aria-expanded') == 'false')  {
-						$('nav.navbar').addClass('whiteNav')
-			 	 		$('nav.navbar .navbar-brand img').attr('src', altLogo);
+						jQuery('nav.navbar').addClass('whiteNav')
+			 	 		jQuery('nav.navbar .navbar-brand img').attr('src', altLogo);
 					} else {
-						$('nav.navbar').removeClass('whiteNav')
-			 	 		$('nav.navbar .navbar-brand img').attr('src', logo);
+						jQuery('nav.navbar').removeClass('whiteNav')
+			 	 		jQuery('nav.navbar .navbar-brand img').attr('src', logo);
 					}
 				}
 			})
 
 			// Hide menu when scrolling down
 			var lastScrollTop = 0;
-			$(window).scroll(function(event){
+			jQuery(window).scroll(function(event){
 				if (hide) {
-			   var st = $(this).scrollTop();
+			   var st = jQuery(this).scrollTop();
 			   if (st > lastScrollTop){
-			       $('nav.navbar').addClass('smallNav');
+			       jQuery('nav.navbar').addClass('smallNav');
 			   } else {
-			      $('nav.navbar').removeClass('smallNav');
+			      jQuery('nav.navbar').removeClass('smallNav');
 			   }
 			   lastScrollTop = st;
 				}

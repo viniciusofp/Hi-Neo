@@ -54,7 +54,7 @@ get_header();
 <script>
 	
 window.addEventListener('load', function () {
-    $('.contato-header').removeClass('bg-blue');
+    jQuery('.contato-header').removeClass('bg-blue');
 
     var isMobile = function() {
   	var check = false;
@@ -66,7 +66,7 @@ window.addEventListener('load', function () {
     var video = document.getElementById('contato-video');
 	  var img = video.querySelector('img');
 	  if (img) {
-		  var fallbackimg = $('#fallbackbg')
+		  var fallbackimg = jQuery('#fallbackbg')
 		  fallbackimg.attr('src', fallbackimg.attr('data-src'));
 	    video.parentNode.replaceChild(img, video);
 	  }

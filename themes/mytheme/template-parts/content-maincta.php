@@ -45,14 +45,14 @@ $the_query = new WP_Query( $args ); ?>
 		var myVar = setInterval(myTimer, 1200);
 
 		function myTimer() {
-			$('.queromaisinformacoes input.wpcf7-submit').toggleClass('animated pulse');
+			jQuery('.queromaisinformacoes input.wpcf7-submit').toggleClass('animated pulse');
 		}
 
-  	$('.queromaisinformacoes').waypoint(function(direction) {
+  	jQuery('.queromaisinformacoes').waypoint(function(direction) {
 			if (direction == "down") {
-		 	 $('.queromaisinformacoes .col-12').addClass('unBlur');
+		 	 jQuery('.queromaisinformacoes .col-12').addClass('unBlur');
 			} else {
-		 	 $('.queromaisinformacoes .col-12').removeClass('unBlur');
+		 	 jQuery('.queromaisinformacoes .col-12').removeClass('unBlur');
 			}
 		}, {
 		  offset: '80%'
