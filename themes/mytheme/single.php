@@ -15,7 +15,7 @@
 get_header();
 
 if (have_posts()): while(have_posts()): the_post();
-
+$theID = get_the_ID();
 ?>
 	
 <div class="page-header bg-blue text-center">
@@ -66,20 +66,39 @@ if (have_posts()): while(have_posts()): the_post();
 			</div>
 		</div>
 		<div class="row">
-			<?php $i = 0; while ($i < 3 ) : ?>
-			<div class="col-md-4">
-				<a href="#">
-					<div class="blog-item" style="background-image: url('<?php echo get_template_directory_uri() ?>/img/Typewriter.jpg');">
-						<div class="blog-meta">
-							<h4 class="title">Aqui é o título de alguma notícia</h4>
-							<p><small>10 de dezembro de 2018</small></p>
-						</div>
-					</div>
-				</a>
-			</div>		
-			<?php $i++; endwhile; ?>
+			<?php 
+			$args = array(
+				'post_type' => 'post',
+				'posts_per_page' => 3,
+				'post__not_in' => array($theID),
+				'orderby' => 'rand'
+			);
+			$the_query = new WP_Query( $args ); ?>
+
+			<?php if ( $the_query->have_posts() ) : ?>
+
+				<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+
+						<div class="col-md-4">
+							<a href="<?php the_permalink(); ?>">
+								<div class="blog-item" style="background-image: url(<?php the_post_thumbnail_url('medium') ?>);">
+									<div class="blog-meta">
+										<h4 class="title"><?php the_title(); ?></h4>
+										<p><small><?php echo get_the_date() ?></small></p>
+									</div>
+								</div>
+							</a>
+						</div>	
+
+				<?php endwhile; ?>
+
+				<?php wp_reset_postdata(); ?>
+
+			<?php else : ?>
+				<p><?php esc_html_e( 'Sorry, no posts matched your criteria.' ); ?></p>
+			<?php endif; ?>
 			<div class="col-12 pt-5 text-center">
-				<button class="btn btn-primary">Ver todos</button>
+				<a href="<?php echo home_url('/blog') ?>"><button class="btn btn-primary">Leia mais</button></a>
 			</div>
 		</div>
 	</div>

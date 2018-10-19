@@ -21,20 +21,9 @@ get_header();
 	$color = 'color-' . $cor;
 	$bgclass = 'bg-' . $cor;
 	$svgfill = 'fill-' . $cor;
-if (is_page('inbound-marketing')) {
-
-	$bgimg = get_template_directory_uri() . '/img/bginbound.jpg';
-} else if (is_page('links-patrocinados')) {
-
-	$bgimg = get_template_directory_uri() . '/img/bglinks.jpg';
-} else if (is_page('automacao-de-marketing-e-vendas')) {
-
-	$bgimg = get_template_directory_uri() . '/img/bgautomacao.jpg';
-} else {
-	$bgimg = '';
-} ?>
+?>
 	
-<div class="page-header <?php echo $bgclass ?> servicos-header text-center" style="background-image: url(<?php echo $bgimg ?>);">
+<div class="page-header <?php echo $bgclass ?> servicos-header text-center" style="background-image: url(<?php the_post_thumbnail_url('full') ?>);">
 	<div class="container">
 		<div class="row justify-content-center">
 			<div class="col-md-10 col-lg-8">
