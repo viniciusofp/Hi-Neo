@@ -8,6 +8,7 @@
  *
  * @package Tema_por_viniciusofp
  */
+header("X-Robots-Tag: all", true);
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
