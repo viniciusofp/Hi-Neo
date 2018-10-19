@@ -12,6 +12,7 @@
 <!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
+	<meta name="robots" content="all">
 	<style>
 		<?php include 'style.css' ?>
 	</style>
