@@ -41,7 +41,7 @@ get_header();
 		$blogQuery = new WP_Query($blogArgs); ?>
 		<?php while ( $blogQuery->have_posts() ) : $blogQuery->the_post(); ?>
 			<div class="row">
-				<div class="col-lg-6 col-md-5 thumbnail" style="background-image: url('<?php the_post_thumbnail_url('large'); ?>');">
+				<div class="col-lg-6 col-md-5 thumbnail" style="background-image: url('<?php the_post_thumbnail_url('medium'); ?>');">
 					<a href="<?php the_permalink(); ?>" class="imglink">
 					</a>
 				</div>

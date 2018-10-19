@@ -8,7 +8,7 @@ $linha_fina = get_field('hero_linha_fina');
 <div class="home-hero bg-purple">
 	<video id="home-video" autoplay muted loop playsinline>
   	<source src="<?php echo $videobg; ?>" type="video/mp4">
-  	<img src="<?php echo $imagebg; ?>" alt="">
+  	<img id="fallbackbg" src="<?php echo $imagebg; ?>" alt="">
 	</video>
 	<div class="container">
 		<div class="row">
@@ -44,6 +44,8 @@ window.onload = function(e){
     var video = document.getElementById('home-video');
 	  var img = video.querySelector('img');
 	  if (img) {
+	  	var fallbackimg = $('#fallbackbg')
+		  fallbackimg.attr('src', fallbackimg.attr('data-src'));
 	    video.parentNode.replaceChild(img, video);
 	  }
 	}

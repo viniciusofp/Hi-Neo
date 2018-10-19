@@ -13,9 +13,6 @@
 <html <?php language_attributes(); ?>>
 <head>
 	<meta name="robots" content="all">
-	<style>
-		<?php include 'style.css' ?>
-	</style>
 	<meta name="googlebot" content="index,archive,follow,noodp">
 	<meta name="robots" content="all,index,follow">
 	<meta name="msnbot" content="all,index,follow">

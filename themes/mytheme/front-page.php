@@ -135,7 +135,7 @@ $active = 'active';
 
 						<div class="col-md-4">
 							<a href="<?php the_permalink(); ?>">
-								<div class="blog-item" style="background-image: url('<?php the_post_thumbnail_url() ?>);">
+								<div class="blog-item" style="background-image: url(<?php the_post_thumbnail_url('medium') ?>);">
 									<div class="blog-meta">
 										<h4 class="title"><?php the_title(); ?></h4>
 										<p><small><?php echo get_the_date() ?></small></p>
