@@ -78,14 +78,15 @@ get_header();
 	<?php endif ?>
 </div>
 
-<div class="blog-newsletter">
+<div class="blog-newsletter rellax" data-rellax-speed="-1" data-rellax-percentage="0.4">
 	<div class="container">
 		<div class="row justify-content-center">
 			<div class="col-12 col-sm-10 col-xl-8 text-center">
 				<div class="newsletter">
 					<?php echo do_shortcode('[contact-form-7 id="3074" title="Formulário - Newsletter" html_id="newsletterform"]') ?>
 					<script type="text/javascript">
-							var wpcf7Elm = jQuery('#newsletterform').closest('.wpcf7')[0];wpcf7Elm.addEventListener( 'wpcf7mailsent', function( event ) {__ss_noform.push(['submit', null, '3e2ad501-f2b8-473b-a5b5-d2e53f4f0c48']);}, false );
+							var wpcf7Elm = jQuery('#newsletterform').closest('.wpcf7')[0];
+							wpcf7Elm.addEventListener( 'wpcf7mailsent', function( event ) {__ss_noform.push(['submit', null, '3e2ad501-f2b8-473b-a5b5-d2e53f4f0c48']);}, false );
 					    var __ss_noform = __ss_noform || [];
 					    __ss_noform.push(['baseURI', 'https://app-3QNCT37ACG.marketingautomation.services/webforms/receivePostback/MzawMDEzMbe0AAA/']);
 					    __ss_noform.push(['form', 'newsletterform', '3e2ad501-f2b8-473b-a5b5-d2e53f4f0c48']);

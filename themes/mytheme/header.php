@@ -29,7 +29,7 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<script defer src="https://use.fontawesome.com/releases/v5.4.1/js/all.js" integrity="sha384-L469/ELG4Bg9sDQbl0hvjMq8pOcqFgkSpwhwnslzvVVGpDjYJ6wJJyYjvG3u8XW7" crossorigin="anonymous"></script>
 
-
+	<?php get_template_part( 'template-parts/header', 'pixels') ?>
 
 	<?php wp_head(); ?>
 </head>
@@ -129,5 +129,5 @@
 
 		}); //window.load
 	</script>
-
+<div class="rellax"></div>
 	<div id="content" class="site-content">

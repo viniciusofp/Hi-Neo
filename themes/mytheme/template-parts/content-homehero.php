@@ -53,7 +53,8 @@ window.onload = function(e){
 
 <!-- SharpSpring -->
 <script type="text/javascript">
-		var wpcf7Elm = jQuery('#homeemail').closest('.wpcf7')[0];wpcf7Elm.addEventListener( 'wpcf7mailsent', function( event ) {__ss_noform.push(['submit', null, '16d437f1-f5da-4a9a-b655-8052d0e53c12']);}, false );
+		var wpcf7Elm = jQuery('#homeemail').closest('.wpcf7')[0];
+		wpcf7Elm.addEventListener( 'wpcf7mailsent', function( event ) {__ss_noform.push(['submit', null, '16d437f1-f5da-4a9a-b655-8052d0e53c12']);}, false );
     var __ss_noform = __ss_noform || [];
     __ss_noform.push(['baseURI', 'https://app-3QNCT37ACG.marketingautomation.services/webforms/receivePostback/MzawMDEzMbe0AAA/']);
     __ss_noform.push(['form', 'homeemail', '16d437f1-f5da-4a9a-b655-8052d0e53c12']);
